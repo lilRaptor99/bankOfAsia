@@ -17,11 +17,8 @@
 
         if($userType === "administrator"){
             if(connectDb($userName,$pwd)){
-                echo "Administrator Login Error";
-                echo "You will be redirected to Login Page in 8 seconds";
-                //sleep(9);
-                //include('logout.php'); //run logout.php to destroy session and move to login page (Index page)
-
+                //Administrator Login Error
+                include('login_error.php');
             } else{
                 echo "Administrator Login Success";
                 $_SESSION['username'] = $userName;
@@ -31,13 +28,13 @@
             }
             
         } else if($userType === "customer") {
-            echo "customer";
+            //echo "customer";
             verifyCustomerLogin();
             //move to queries.php
             //username and type will be saved in session $_SESSION["username"] $_SESSION["type"]
         
         } else {// userType = manager or operator (both are employees)
-            echo "other";
+            //echo "other";
             verifyEmployeeLogin();
             //move to queries.php
             //username and type will be saved in session $_SESSION["username"] $_SESSION["type"]
@@ -50,7 +47,7 @@
             define('DB_PASSWORD', $dbPassword);
             define('DB_DATABASE', 'boa_db');
             global $db;
-            $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+            $db = @mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
             return mysqli_connect_errno(); // 0 - login success; other values- db login failed
         }
 
@@ -65,7 +62,7 @@
             $sql = "SELECT customer_id FROM customer_login WHERE username = '$userName' and password = '$pwd'";
             $result = mysqli_query($db,$sql);
             $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-            $active = $row['active'];
+            //$active = $row['active'];
       
             $count = mysqli_num_rows($result);
       
@@ -75,8 +72,8 @@
                 $_SESSION['type'] = $userType;
                 header("location: queries.php");
             }else {
-                echo "Customer Login Error";
-                include('logout.php'); //run logout.php to destroy session and move to login page (Index page)
+                //echo "Customer Login Error";
+                include('login_error.php'); //run logout.php to destroy session and move to login page (Index page)
             }
             
         }
@@ -108,8 +105,8 @@
                 $_SESSION['type'] = $userType;
                 header("location: queries.php");
             }else {
-                echo "Employee Login Error";
-                include('logout.php'); //run logout.php to destroy session and move to login page (Index page)
+                //echo "Employee Login Error";
+                include('login_error.php'); //run logout.php to destroy session and move to login page (Index page)
             }
         }
     ?>
