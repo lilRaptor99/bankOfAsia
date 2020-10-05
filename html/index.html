@@ -1,0 +1,64 @@
+<!Doctype html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Bank of Asia - Login</title>
+</head>
+<style>
+    td{text-align: center; color: lightcyan;}
+    body{background-color:#22282b;}
+    
+</style>
+
+<body>
+    <table width="100%">
+        <tr>
+            <td><img src="../boa.png" alt="Bank of asia logo" height="80"></td>
+        </tr>
+        <tr>
+            <td><h1>Welcome to Bank of Asia</h1></td>
+        </tr>
+        <tr>
+            <td><h2>Login to Continue</h2></td>
+        </tr>
+        <tr>
+            <td>
+                <form action="login.php" method="post">
+                    <label for="userType" style="font-weight: bold;">Select User Type  :</label>
+                    <select name="userType">
+                        <option value="customer">Customer</option>
+                        <option value="manager">Manager</option>
+                        <option value="operator">Operator</option>
+                        <option value="administrator">Administrator</option>
+                    </select> <br><br>
+                    <input type="text" id="userName" name="userName" placeholder="Username" size="30"><br><br>
+                    <input type="password" id="pwd" name="pwd" placeholder="Password" size="30"><br><br>
+                    <input type="submit" value="Login">
+                  </form>
+            </td>
+        </tr>
+
+    </table>
+
+
+    <!--div align="center">
+    <h1>Welcome to Bank of Asia</h1> <br>
+    <h2>Login to Continue</h2> <br>
+    
+	<form action="login.php" method="post">
+        <label for="userType" style="font-weight: bold;">Select User Type  :</label>
+        <select name="userType">
+            <option value="customer">Customer</option>
+            <option value="manager">Manager</option>
+            <option value="operator">Operator</option>
+            <option value="administrator">Administrator</option>
+        </select> <br><br>
+        <label for="userName">Username:</label>
+        <input type="text" id="userName" name="userName"><br><br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <input type="submit" value="Login">
+      </form>
+    </div-->
+</body>
+</html>
