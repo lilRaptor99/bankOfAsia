@@ -23,6 +23,7 @@
                 echo "Administrator Login Success";
                 $_SESSION['username'] = $userName;
                 $_SESSION['type'] = $userType;
+                $_SESSION['pwd'] = $pwd;
 
                 header("location: queries.php"); //opening queries.php
             }
@@ -31,13 +32,13 @@
             //echo "customer";
             verifyCustomerLogin();
             //move to queries.php
-            //username and type will be saved in session $_SESSION["username"] $_SESSION["type"]
+            //username and type will be saved in session $_SESSION["username"] $_SESSION["type"] 
         
-        } else {// userType = manager or operator (both are employees)
+        } else {// userType = employees like manager, hod, employee.
             //echo "other";
             verifyEmployeeLogin();
             //move to queries.php
-            //username and type will be saved in session $_SESSION["username"] $_SESSION["type"]
+            //username and type will be saved in session $_SESSION["username"] $_SESSION["type"] 
         }
 
 
@@ -83,8 +84,8 @@
             global $userName;
             global $pwd;
             global $userType;
-            $uType = "";
-            
+
+            $uType = ""; // convert user type to database format (Employee -> EMP)
             switch ($userType) {
                 case "Employee":
                     $uType = "EMP";

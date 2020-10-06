@@ -23,7 +23,9 @@
 
     </table>
     <h3>SELECT Queries</h3>
-
+        <ol>
+            <li>SELECT username, type FROM employee_login WHERE employee_id = '00005'; &nbsp; <a href="select/select1.php">Click to Execute</a></li>
+        </ol>
 
 </body>
 </html>
