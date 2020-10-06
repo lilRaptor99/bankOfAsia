@@ -15,7 +15,7 @@
         $userType = $_POST["userType"];
         $pwd = $_POST["pwd"];
 
-        if($userType === "administrator"){
+        if($userType === "Administrator"){
             if(connectDb($userName,$pwd)){
                 //Administrator Login Error
                 include('login_error.php');
@@ -27,7 +27,7 @@
                 header("location: queries.php"); //opening queries.php
             }
             
-        } else if($userType === "customer") {
+        } else if($userType === "Customer") {
             //echo "customer";
             verifyCustomerLogin();
             //move to queries.php
@@ -84,10 +84,23 @@
             global $pwd;
             global $userType;
             $uType = "";
-            if($userType === "manager"){
-                $uType = "MGR";
-            } else{
-                $uType = "OPR";
+            
+            switch ($userType) {
+                case "Employee":
+                    $uType = "EMP";
+                    break;
+                
+                case "Entry Operator":
+                    $uType = "OPR";
+                    break;
+                
+                case "Head of Department":
+                    $uType = "HOD";
+                    break;
+
+                case "Manager":
+                    $uType = "MGR";
+                    break;
             }
 
             connectDb("root","");
@@ -95,7 +108,7 @@
             $sql = "SELECT employee_id FROM employee_login WHERE username = '$userName' and password = '$pwd' and type = '$uType'";
             $result = mysqli_query($db,$sql);
             $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-            $active = $row['active'];
+            //$active = $row['active'];
       
             $count = mysqli_num_rows($result);
 

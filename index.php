@@ -12,10 +12,12 @@
 	<form action="login.php" method="post">
         <label for="userType" style="font-weight: bold;">Select User Type  :</label>
         <select name="userType">
-            <option value="customer">Customer</option>
-            <option value="manager">Manager</option>
-            <option value="operator">Operator</option>
-            <option value="administrator">Administrator</option>
+            <option value="Customer">Customer</option>
+            <option value="Employee">Employee</option>
+            <option value="Entry Operator">Entry Operator</option>
+            <option value="Head of Department">Head of Department</option>
+            <option value="Manager">Manager</option>
+            <option value="Administrator">Administrator</option>
         </select> <br><br>
         <label for="userName">Username:</label>
         <input type="text" id="userName" name="userName"><br><br>
