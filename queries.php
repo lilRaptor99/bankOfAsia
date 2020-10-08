@@ -24,7 +24,10 @@
     </table>
     <h3>SELECT Queries</h3>
         <ol>
-            <li>SELECT username, type FROM employee_login WHERE employee_id = '00005'; &nbsp; <a href="select/select1.php">Click to Execute</a></li>
+            <li><pre>SELECT username, type FROM employee_login WHERE employee_id = '00005'; &nbsp; <a href="select/select1.php">Click to Execute</a></pre></li>
+            <li><pre>SELECT d.Name, dc.Contact_No FROM dept_contact dc, department d, works_on wo, assignment a 
+                        WHERE d.Department_Code = dc.Department_Code AND d.Department_Code = wo.Department_Code 
+                        AND a.Project_ID = wo.Project_ID AND a.Project_ID = '00001' &nbsp; <a href="select/select2.php">Click to Execute</a></pre></li>
         </ol>
 
 </body>
