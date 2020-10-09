@@ -68,6 +68,8 @@
           
         mysqli_close($db);
 
+        echo "<h4>You will be redirected to Query Page in <em>8 seconds</em></h4>";
+        header( "refresh:8;url=queries.php" );
 
     ?>
 
