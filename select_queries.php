@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <h3>Select Query Result</h3>
+    <h3>SELECT Query Result</h3>
     <?php 
         $db;
         include("db_connect.php"); //connects to the Database according to the user level. variable $db will be used.

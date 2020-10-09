@@ -39,10 +39,18 @@
         </ol>
         </form>
 
-    <h3>Insert Queries</h3>
+    <h3>INSERT Queries</h3>
         <form action="insert_queries.php" method="POST">
         <ol>
-            <li><pre>INSERT INTO employee VALUES();</pre></li>
+            <li>INSERT INTO employee VALUES(<input type="text" maxlength="5" size="2" name="in1_eID" placeholder="EmpID">, 
+                    <input type="text" maxlength="30" size="25" name="in1_name" placeholder="Name">, 
+                    <input type="text" maxlength="12" size="10" name="in1_NIC" placeholder="NIC">,
+                    <input type="text" maxlength="70" size="40" name="in1_address" placeholder="Address">,
+                    <input type="date" name="in1_dob" placeholder="DOB">,
+                    <input type="text" maxlength="5" size="3" name="in1_deptCode" placeholder="DEPT">,
+                    <input type="text" maxlength="3" size="2" name="in1_branchID" placeholder="BR">
+            );</li>
+            
                 <input type="submit" value="Execute Query" name="insert1"><br>
             
             <li><pre>INSERT INTO employee VALUES();</pre></li>
