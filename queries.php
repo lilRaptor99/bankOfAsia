@@ -9,7 +9,7 @@
 	<title>Bank of Asia - Query Page</title>
 </head>
 <body>
-    <table width="100%" border="0">
+    <table width="100%">
         <tr>
         <td>
             <?php
@@ -25,7 +25,7 @@
     <h3>SELECT Queries</h3>
         <form action="select_queries.php" method="POST">
         <ol>
-            <li>SELECT username, type FROM employee_login WHERE employee_id = '00005';</li>
+            <li>SELECT username, type FROM employee_login WHERE employee_id = '<input type="text" maxlength="5" size="2" name="sel1_eID" placeholder="EmpID">';</li>
                 <input type="submit" value="Execute Query" name="select1"><br><br>
             
             <li>SELECT * FROM employee;</li>
@@ -61,6 +61,36 @@
             );</li>
                 <input type="submit" value="Execute Query" name="insert2"><br><br>
 
+
+        </ol>
+        </form>
+
+        <h3>UPDATE Queries</h3>
+        <form action="update_queries.php" method="POST">
+        <ol>
+            <li> UPDATE employee SET name = '<input type="text" maxlength="30" size="25" name="upd1_name" placeholder="Name">' 
+                WHERE employee_id = '<input type="text" maxlength="5" size="2" name="upd1_eID" placeholder="EmpID">';
+            </li>
+            <input type="submit" value="Execute Query" name="update1"><br><br>
+
+            <li> UPDATE -table- SET -attribute- = ' ' 
+                WHERE -attribute2- = ' ';
+            </li>
+            <input type="submit" value="Execute Query" name="update2"><br><br>
+
+        </ol>
+        </form>
+
+        <h3>DELETE Queries</h3>
+        <form action="delete_queries.php" method="POST">
+        <ol>
+            <li> DELETE FROM employee WHERE employee_id = '<input type="text" maxlength="5" size="2" name="del1_eID" placeholder="EmpID">';
+            </li>
+            <input type="submit" value="Execute Query" name="update1"><br><br>
+
+            <li> DELETE FROM -table- WHERE -attribute- = ' ';
+            </li>
+            <input type="submit" value="Execute Query" name="update2"><br><br>
 
         </ol>
         </form>

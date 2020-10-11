@@ -16,7 +16,7 @@
         include("db_connect.php"); //connects to the Database according to the user level. variable $db will be used.
 
         $sql;   //sql query that needs to be executed    //= "SELECT * FROM employee"
-        if(isset($_POST["select1"])) $sql = "SELECT username, type FROM employee_login WHERE employee_id = '00005';";
+        if(isset($_POST["select1"])) $sql = "SELECT username, type FROM employee_login WHERE employee_id = '". $_POST["sel1_eID"] ."';";
         else if(isset($_POST["select2"])) $sql = "SELECT * FROM employee;";
         else if(isset($_POST["select3"])) $sql = "SELECT d.Name, dc.Contact_No FROM dept_contact dc, department d, works_on wo, assignment a 
                                                 WHERE d.Department_Code = dc.Department_Code AND d.Department_Code = wo.Department_Code 
@@ -34,7 +34,7 @@
                 $columns = array_keys($row);
 
             } else {
-                echo "Query error, no rows returned";
+                echo "<h3>Query error</h3>";
             }
 
             echo "<p>Returned row count: " . $numRows . "</p>";
@@ -60,6 +60,8 @@
 
             // Free result set
             mysqli_free_result($result);
+
+            echo "<h4>Query:</h4><p>". $sql ."</p>";
 
         } else {
             echo "<p>Error: Invalid Data inserted or you have NO PERMISSION to execute this query</p>";

@@ -108,7 +108,7 @@
 
             $sql = "SELECT employee_id FROM employee_login WHERE username = '$userName' and password = '$pwd' and type = '$uType'";
             $result = mysqli_query($db,$sql);
-            $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+            //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
             //$active = $row['active'];
       
             $count = mysqli_num_rows($result);
