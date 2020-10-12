@@ -25,7 +25,13 @@
         $result = mysqli_query($db,$sql);
         
         if ($result) { // query successful
-            echo "<h3>Data Updated Successfully</h3>";
+            $rowsAffected = mysqli_affected_rows($db);
+            if($rowsAffected == 0){  // no rows were updated by the query. Invalid data inserted.
+                echo "<h3>0 rows Updated</h3>";
+                echo "<p>Error: Invalid Data inserted</p>";
+            } else{
+                echo "<h3><em>$rowsAffected rows</em> Updated Successfully</h3>";
+            }
             echo "<h4>Query:</h4><p>". $sql ."</p>";
 
         } else {

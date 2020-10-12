@@ -29,7 +29,7 @@
                 echo "<h3>0 rows Deleted</h3>";
                 echo "<p>Error: Invalid Data inserted</p>";
             } else{
-                echo "<h3>Data Deleted Successfully</h3>";
+                echo "<h3><em>$rowsAffected rows</em> Deleted Successfully</h3>";
             }
             echo "<h4>Query:</h4><p>". $sql ."</p>";
 
@@ -40,8 +40,8 @@
           
         mysqli_close($db);
 
-        echo "<h4>You will be redirected to Query Page in <em>6 seconds</em></h4>";
-        header( "refresh:6;url=queries.php" );
+        echo "<h4>You will be redirected to Query Page in <em>8 seconds</em></h4>";
+        header( "refresh:8;url=queries.php" );
 
     ?>
 
