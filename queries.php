@@ -86,11 +86,11 @@
         <ol>
             <li> DELETE FROM employee WHERE employee_id = '<input type="text" maxlength="5" size="2" name="del1_eID" placeholder="EmpID">';
             </li>
-            <input type="submit" value="Execute Query" name="update1"><br><br>
+            <input type="submit" value="Execute Query" name="delete1"><br><br>
 
             <li> DELETE FROM -table- WHERE -attribute- = ' ';
             </li>
-            <input type="submit" value="Execute Query" name="update2"><br><br>
+            <input type="submit" value="Execute Query" name="delete2"><br><br>
 
         </ol>
         </form>
