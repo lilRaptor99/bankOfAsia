@@ -16,8 +16,8 @@
         include("db_connect.php"); //connects to the Database according to the user level. variable $db will be used.
 
         $sql;   //sql query that needs to be executed selected by which button is pressed
-        if(isset($_POST["insert1"])) $sql = "INSERT INTO employee VALUES('" . $_POST["in1_eID"] ."', '". $_POST["in1_name"] . "', '". $_POST["in1_NIC"] .
-                        "', '". $_POST["in1_address"] . "', '". $_POST["in1_dob"] . "', '". $_POST["in1_deptCode"] . "', '". $_POST["in1_branchID"] . "')";
+        if(isset($_POST["insert1"])) $sql = "INSERT INTO employee VALUES('" . $_POST["in1_eID"] ."', '". $_POST["in1_name"] . "', '". 
+        $_POST["in1_NIC"] . "', '". $_POST["in1_address"] . "', '". $_POST["in1_dob"] . "', '". $_POST["in1_deptCode"] . "', '". $_POST["in1_branchID"] . "')";
 
         else if(isset($_POST["insert2"])) $sql = "INSERT INTO branch VALUES('" . $_POST["in2_branchID"] ."', '". $_POST["in2_name"] . "', '". $_POST["in2_location"] .
                         "', '". $_POST["in2_area"] . "')";
