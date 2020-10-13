@@ -17,7 +17,7 @@
 
         $sql;   //sql query that needs to be executed    //= "SELECT * FROM employee"
         if(isset($_POST["select1"])) $sql = "SELECT username, type FROM employee_login WHERE employee_id = '". $_POST["sel1_eID"] ."';";
-        else if(isset($_POST["select2"])) $sql = "SELECT * FROM employee;";
+        else if(isset($_POST["select2"])) $sql = "SELECT * FROM " . $_POST['sel2_table'] . ";";
         else if(isset($_POST["select3"])) $sql = "SELECT d.Name, dc.Contact_No FROM dept_contact dc, department d, works_on wo, assignment a 
                                                 WHERE d.Department_Code = dc.Department_Code AND d.Department_Code = wo.Department_Code 
                                                 AND a.Project_ID = wo.Project_ID AND a.Project_ID = '00001';";
