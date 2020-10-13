@@ -7,9 +7,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Select Query Result</title>
+    <link rel="stylesheet" type="text/css" href="CSS/new_style.css">
+
 </head>
 <body>
-
+     <div class=header>
+     <div class=wrapper>
+    <div align="center">
     <h3>SELECT Query Result</h3>
     <?php 
         $db;
@@ -34,7 +38,7 @@
                 $columns = array_keys($row);
 
             } else {
-                echo "<h3>Query error</h3>";
+                echo "<h3>Query error!</h3>";
             }
 
             echo "<p>Returned row count: " . $numRows . "</p>";
@@ -43,7 +47,7 @@
              
             echo "<table border='1'><tr>";
             for ($i=0; $i < count($columns); $i++) {   // creating table header from columns array
-                echo "<td>" . $columns[$i] . "</td>";
+                echo "<th>" . $columns[$i] . "</th>";
             }
             echo "</tr>";
 
@@ -74,6 +78,9 @@
         header( "refresh:8;url=queries.php" );
 
     ?>
+</div>
+    </div>
+    </div>
 
 </body>
 </html>

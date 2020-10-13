@@ -1,0 +1,35 @@
+@font-face{
+	font-family: 'Bellota-LightItalic';
+	src : url('bellota/Bellota-LightItalic.otf');
+}
+@font-face{
+	font-family: 'Bellota-BoldItalic';
+	src : url('bellota/Bellota-BoldItalic.otf');
+}
+form{
+	text-align: center;
+}
+body{
+	margin:4px;
+	height: 100%;
+	padding:6px;
+	font-family: 'Bellota-BoldItalic';
+	border: 4px solid #1885a9;
+	border-radius: 10px;
+}
+.header h4{
+	font-family: 'Bellota-BoldItalic';
+	color:red;
+}
+.wrapper{
+	background-image: url("Desktop.jpg");
+	background-size: 120%;
+	font-weight: bold;
+	width: 100%;
+	height: 10%;
+	min-width: 950px;
+	min-height: 50px;
+	padding-top: 30px;
+	border-radius: 10px;
+
+}

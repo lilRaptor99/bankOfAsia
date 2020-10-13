@@ -7,10 +7,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Update Query Result</title>
+    <link rel="stylesheet" type="text/css" href="CSS/main_style.css">
 </head>
 <body>
-
+    <div class=header>
+    <div class=wrapper>
+    <div align="center">
     <h3>UPDATE Query Result</h3>
+    <br><br>
     <?php 
         $db;
         include("db_connect.php"); //connects to the Database according to the user level. variable $db will be used.
@@ -45,6 +49,7 @@
         header( "refresh:6;url=queries.php" );
 
     ?>
-
+    </div>
+    </div>
 </body>
 </html>
