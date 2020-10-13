@@ -75,6 +75,21 @@
             );</li>
                 <input type="submit" value="Execute Query" name="insert2"><br><br>
 
+            <li>INSERT INTO customer VALUES(
+                <input type="text" maxlength="5" size="3" name="in3_customerID" placeholder="Cust ID">, 
+                <input type="text" maxlength="3" size="2" name="in3_branchID" placeholder="Br. ID">); <br>
+                
+                INSERT INTO person VALUES(
+                <input type="text" maxlength="5" size="4" name="in3_customerID" placeholder="Cust ID" disabled>, 
+                <input type="text" maxlength="12" size="10" name="in3_NIC" placeholder="NIC">,
+                <input type="text" maxlength="30" size="25" name="in3_name" placeholder="Name">, 
+                <input type="text" maxlength="8" size="4" name="in3_zip" placeholder="ZIP">,
+                <input type="text" maxlength="20" size="10" name="in3_province" placeholder="Province">,
+                <input type="text" maxlength="20" size="10" name="in1_city" placeholder="City">,
+                <input type="text" maxlength="70" size="40" name="in1_address" placeholder="Address">);
+            </li>
+                <input type="submit" value="Execute Queries" name="insert3"><br><br>
+
 
         </ol>
         </form>
