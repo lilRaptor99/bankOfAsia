@@ -7,9 +7,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Insert Query Result</title>
+	<link rel="stylesheet" type="text/css" href="CSS/new_style.css">
 </head>
 <body>
-
+	<div class=wrapper>
+    <div align="center">
     <h3>INSERT Query Result</h3>
     <?php 
         $db;
@@ -40,6 +42,8 @@
         header( "refresh:6;url=queries.php" );
 
     ?>
+</div>
+</div>
 
 </body>
 </html>
