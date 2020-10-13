@@ -7,9 +7,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Update Query Result</title>
+    <link rel="stylesheet" type="text/css" href="CSS/main_style.css">
 </head>
 <body>
-
+    <div class=header>
+     <div class=wrapper>
     <h3>DELETE Query Result</h3>
     <?php 
         $db;
@@ -44,6 +46,7 @@
         header( "refresh:8;url=queries.php" );
 
     ?>
-
+</div>
+</div>
 </body>
 </html>

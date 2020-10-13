@@ -7,8 +7,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Bank of Asia - Query Page</title>
+    <link rel="stylesheet" type="text/css" href="CSS/query_style.css">
 </head>
 <body>
+
+    <div class="wrapper">
     <table width="100%">
         <tr>
         <td>
@@ -22,7 +25,8 @@
         </tr>
 
     </table>
-    <h3>SELECT Queries</h3>
+    <br><br><br><br>L
+    <h3 align="center">SELECT Queries</h3><br>
         <form action="select_queries.php" method="POST">
         <ol>
             <li>SELECT username, type FROM employee_login WHERE employee_id = '<input type="text" maxlength="5" size="2" name="sel1_eID" placeholder="EmpID">';</li>
@@ -39,7 +43,7 @@
         </ol>
         </form>
 
-    <h3>INSERT Queries</h3>
+    <h3 align="center">INSERT Queries</h3><br>
         <form action="insert_queries.php" method="POST">
         <ol>
             <li>INSERT INTO employee VALUES(
@@ -65,7 +69,7 @@
         </ol>
         </form>
 
-        <h3>UPDATE Queries</h3>
+        <h3 align="center">UPDATE Queries</h3><br>
         <form action="update_queries.php" method="POST">
         <ol>
             <li> UPDATE employee SET name = '<input type="text" maxlength="30" size="25" name="upd1_name" placeholder="Name">' 
@@ -81,7 +85,7 @@
         </ol>
         </form>
 
-        <h3>DELETE Queries</h3>
+        <h3 align="center">DELETE Queries</h3><br>
         <form action="delete_queries.php" method="POST">
         <ol>
             <li> DELETE FROM employee WHERE employee_id = '<input type="text" maxlength="5" size="2" name="del1_eID" placeholder="EmpID">';
@@ -94,7 +98,7 @@
 
         </ol>
         </form>
-
-        
+        </div>
+        </div>
 </body>
 </html>
