@@ -7,19 +7,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login Error</title>
+	<link rel="stylesheet" type="text/css" href="CSS/Login_error_style.css">
 </head>
-<style>
-    body{text-align: center;}
-</style>
+
 <body>
-    <br><br><h1>Login Error</h1><br>
+	<div class="wrapper">
+    <div align="center">
+    <div class="error_header">
+
+    <br><br><h1>Login Error!</h1><br>
         
     <h2>Possible causes:</h2>
-    <h3>
-            -Incorrect User Type<br>
-            -Incorrect Username<br>
-            -Incorrect Password<br>
-    </h3>   
+    <ul class="a">
+            <li>Incorrect User Type<br></li>
+            <li>Incorrect Username<br></li>
+            <li>Incorrect Password<br></li>
+    </ul>   
 
     <h4>You will be redirected to Login Page in <em>6 seconds</em></h4>
 
@@ -28,5 +31,8 @@
         header( "refresh:6;url=logout.php" );
         
     ?>
+	</div>
+    </div>
+	</div>
 </body>
 </html>
