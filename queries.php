@@ -32,7 +32,21 @@
             <li>SELECT username, type FROM employee_login WHERE employee_id = '<input type="text" maxlength="5" size="2" name="sel1_eID" placeholder="EmpID">';</li>
                 <input type="submit" value="Execute Query" name="select1"><br><br>
             
-            <li>SELECT * FROM employee;</li>
+            <li>SELECT * FROM <select name="sel2_table" id="sel2_table">
+                <option value="employee">employee</option>
+                <option value="employee_qualification">employee_qualification</option>
+                <option value="permanent_employee">permanent_employee</option>
+                <option value="person">person</option>
+                <option value="business">business</option>
+                <option value="branch">branch</option>
+                <option value="department">department</option>
+                <option value="dept_contact">dept_contact</option>
+                <option value="residential_account">residential_account</option>
+                <option value="foreign_account">foreign_account</option>
+                <option value="assignment">assignment</option>
+            </select>
+            
+            ;</li>
                 <input type="submit" value="Execute Query" name="select2"><br><br>
 
             <li>SELECT d.Name, dc.Contact_No FROM dept_contact dc, department d, works_on wo, assignment a <br>
