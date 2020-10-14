@@ -78,7 +78,6 @@
         //header( "refresh:8;url=queries.php" );
 
     ?>
-</div>
     </div>
     </div>
 

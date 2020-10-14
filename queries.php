@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="CSS/query_style.css">
 </head>
 <body>
-
+	 
     <div class="wrapper">
+    <div class="header">
     <table width="100%">
         <tr>
         <td width="30%">
@@ -166,7 +167,7 @@
 
         </ol>
         </form>
-        </div>
+       </div>
         </div>
 </body>
 </html>
