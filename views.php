@@ -30,7 +30,7 @@
         </table>
         <br>
         <ol> 
-        <form action="run_views.php">
+        <form action="run_views.php" method="POST">
             <li>
             <h4>Show to Manager what are the total balances of All the foreign and residential accounts<br>
             Query used to create the view:</h4>
@@ -40,7 +40,7 @@
             SUM(residential_account.Account_Balance) AS Total_balance_of_residential_accounts
             FROM foreign_account, residential_account;
             </pre>    
-            SELECT * FROM total_balance
+            SELECT * FROM total_balance;
             </li>
             <input type="submit" value="Execute Query" name="view1"><br><br>
 
@@ -55,7 +55,7 @@
             account.account_No= foreign_account.account_No
             GROUP BY customer_account.Customer_ID;
             </pre>    
-            SELECT * FROM show_outstanding_balance
+            SELECT * FROM show_outstanding_balance;
             </li>
             <input type="submit" value="Execute Query" name="view2"><br><br>
 
@@ -68,7 +68,7 @@
             FROM permanent_employee 
             WHERE Basic_Salary > 10000.0;
             </pre>    
-            SELECT * FROM greater_salaries
+            SELECT * FROM greater_salaries;
             </li>
             <input type="submit" value="Execute Query" name="view3"><br><br>
 
