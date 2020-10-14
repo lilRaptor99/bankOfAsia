@@ -116,10 +116,25 @@
             </li>
             <input type="submit" value="Execute Query" name="update1"><br><br>
 
-            <li> UPDATE -table- SET -attribute- = ' ' 
-                WHERE -attribute2- = ' ';
+            <li> UPDATE employee_qualification SET qualification = '<input type="text" maxlength="30" size="25" name="upd2_newQualification" placeholder="New Qualification">' 
+                WHERE employee_id = '<input type="text" maxlength="5" size="2" name="upd2_eID" placeholder="EmpID">' AND qualification LIKE '%<input type="text" maxlength="30" size="25" name="upd2_oldQualification" placeholder="Existing Qualification">%';
             </li>
             <input type="submit" value="Execute Query" name="update2"><br><br>
+
+            <li> UPDATE branch SET name = '<input type="text" maxlength="30" size="25" name="upd3_name" placeholder="Branch Name">' 
+                WHERE branch_id = '<input type="text" maxlength="3" size="3" name="upd3_brID" placeholder="BR.ID">';
+            </li>
+            <input type="submit" value="Execute Query" name="update3"><br><br>
+
+            <li> UPDATE customer SET branch_id = '<input type="text" maxlength="3" size="3" name="upd4_brID" placeholder="BR.ID">' 
+                WHERE customer_id = '<input type="text" maxlength="5" size="3" name="upd4_custID" placeholder="Cust ID">';
+            </li>
+            <input type="submit" value="Execute Query" name="update4"><br><br>
+
+            <li> UPDATE person SET name = '<input type="text" maxlength="30" size="25" name="upd5_name" placeholder="Name">' 
+                WHERE customer_id = '<input type="text" maxlength="5" size="3" name="upd5_custID" placeholder="Cust ID">';
+            </li>
+            <input type="submit" value="Execute Query" name="update5"><br><br>
 
         </ol>
         </form>
