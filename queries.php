@@ -32,7 +32,9 @@
     <h3 align="center">SELECT Queries</h3><br>
         <form action="select_queries.php" method="POST">
         <ol>
-            <li>SELECT username, type FROM employee_login WHERE employee_id = '<input type="text" maxlength="5" size="2" name="sel1_eID" placeholder="EmpID">';</li>
+            <li>SELECT username, type <br>
+                FROM employee_login <br>
+                WHERE employee_id = '<input type="text" maxlength="5" size="2" name="sel1_eID" placeholder="EmpID">';</li>
                 <input type="submit" value="Execute Query" name="select1"><br><br>
             
             <li>SELECT * FROM <select name="sel2_table" id="sel2_table">
@@ -54,8 +56,23 @@
 
             <li>SELECT d.Name, dc.Contact_No FROM dept_contact dc, department d, works_on wo, assignment a <br>
                 WHERE d.Department_Code = dc.Department_Code AND d.Department_Code = wo.Department_Code <br> 
-                AND a.Project_ID = wo.Project_ID AND a.Project_ID = '00001';</li>
+                AND a.Project_ID = wo.Project_ID AND a.Project_ID = '00001';
+            </li>
             <input type="submit" value="Execute Query" name="select3"><br><br>
+
+            <li>SELECT ra.Account_Type, ca.Branch_ID FROM residential_account ra, customer_account ca <br>
+                WHERE ra.Account_No = ca.Account_No <br>
+                AND ra.Account_No = '0000000001';
+            </li>
+            <input type="submit" value="Execute Query" name="select4"><br><br>
+
+            <li>SELECT b.Name FROM customer c, branch b <br>
+                WHERE c.Branch_ID = b.Branch_ID <br>
+                AND c.Customer_ID = '00001';
+            </li>
+            <input type="submit" value="Execute Query" name="select5"><br><br>
+
+            
 
         </ol>
         </form>
