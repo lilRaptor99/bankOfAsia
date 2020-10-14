@@ -25,7 +25,7 @@
         </tr>
 
     </table>
-    <br><br><br><br>L
+    <br><br><br><br>
     <h3 align="center">SELECT Queries</h3><br>
         <form action="select_queries.php" method="POST">
         <ol>
@@ -70,6 +70,12 @@
                 <input type="text" maxlength="3" size="2" name="in1_branchID" placeholder="BR">
             );</li>
                 <input type="submit" value="Execute Query" name="insert1"><br><br>
+
+            <li>INSERT INTO employee_qualification VALUES(
+                <input type="text" maxlength="5" size="2" name="in5_eID" placeholder="EmpID">, 
+                <input type="text" maxlength="30" size="25" name="in5_qualification" placeholder="Qualification">
+            );</li>
+                <input type="submit" value="Execute Query" name="insert5"><br><br>
             
             <li>INSERT INTO branch VALUES(
                 <input type="text" maxlength="3" size="2" name="in2_branchID" placeholder="Br. ID">, 
@@ -82,18 +88,22 @@
             <li>INSERT INTO customer VALUES(
                 <input type="text" maxlength="5" size="3" name="in3_customerID" placeholder="Cust ID">, 
                 <input type="text" maxlength="3" size="2" name="in3_branchID" placeholder="Br. ID">); <br>
-                
-                INSERT INTO person VALUES(
-                <input type="text" maxlength="5" size="4" name="in3_customerID" placeholder="Cust ID" disabled>, 
-                <input type="text" maxlength="12" size="10" name="in3_NIC" placeholder="NIC">,
-                <input type="text" maxlength="30" size="25" name="in3_name" placeholder="Name">, 
-                <input type="text" maxlength="8" size="4" name="in3_zip" placeholder="ZIP">,
-                <input type="text" maxlength="20" size="10" name="in3_province" placeholder="Province">,
-                <input type="text" maxlength="20" size="10" name="in1_city" placeholder="City">,
-                <input type="text" maxlength="70" size="40" name="in1_address" placeholder="Address">);
+            </li>    
+                <input type="submit" value="Execute Query" name="insert3"><br><br>
+            
+            <li>INSERT INTO person VALUES(
+                <input type="text" maxlength="5" size="4" name="in4_customerID" placeholder="Cust ID">, 
+                <input type="text" maxlength="12" size="10" name="in4_NIC" placeholder="NIC">,
+                <input type="text" maxlength="30" size="25" name="in4_name" placeholder="Name">, 
+                <input type="text" maxlength="8" size="4" name="in4_zip" placeholder="ZIP">,
+                <input type="text" maxlength="20" size="10" name="in4_province" placeholder="Province">,
+                <input type="text" maxlength="20" size="10" name="in4_city" placeholder="City">,
+                <input type="text" maxlength="70" size="40" name="in4_address" placeholder="Address">);
             </li>
-                <input type="submit" value="Execute Queries" name="insert3"><br><br>
+                <input type="submit" value="Execute Query" name="insert4"><br><br>
 
+                
+            
 
         </ol>
         </form>

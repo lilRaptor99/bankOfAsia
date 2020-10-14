@@ -12,6 +12,7 @@
 <body>
 	<div class=wrapper>
     <div align="center">
+    <div class="header">
     <h3>INSERT Query Result</h3>
     <?php 
         $db;
@@ -23,25 +24,32 @@
 
         else if(isset($_POST["insert2"])) $sql = "INSERT INTO branch VALUES('" . $_POST["in2_branchID"] ."', '". $_POST["in2_name"] . "', '". $_POST["in2_location"] .
                         "', '". $_POST["in2_area"] . "')";
+
+        else if(isset($_POST["insert3"])) $sql = "INSERT INTO customer VALUES('" . $_POST["in3_customerID"] . "', '" . $_POST["in3_branchID"] . "');";
+
+        else if(isset($_POST["insert4"])) $sql ="INSERT INTO person VALUES('" . $_POST["in4_customerID"] . "', '"  . $_POST["in4_NIC"] . "', '" . $_POST["in4_name"] . "', '" . $_POST["in4_zip"] . "', '"  
+             . $_POST["in4_province"] . "', '" . $_POST["in4_city"] . "', '" . $_POST["in4_address"] . "');";
+        
+        else if(isset($_POST["insert5"])) $sql = "INSERT INTO employee_qualification VALUES('" . $_POST["in5_eID"] . "', '" . $_POST["in5_qualification"] . "');";
         
         //$result = 1;
         $result = mysqli_query($db,$sql);
         
         if ($result) { // query successful
             echo "<h3>Data Inserted Successfully</h3>";
-            echo "<h4>Query:</h4><p>". $sql ."</p>";
 
         } else {
             echo "<p>Error: Invalid Data inserted or you have NO PERMISSION to execute this query</p>";
             echo "<p>Error description: " . mysqli_error($db) . "</p>";
         }
-          
+        echo "<h4>Query:</h4><p>". $sql ."</p>";
         mysqli_close($db);
 
         echo "<h4>You will be redirected to Query Page in <em>6 seconds</em></h4>";
-        header( "refresh:6;url=queries.php" );
+        //header( "refresh:6;url=queries.php" );
 
     ?>
+</div>
 </div>
 </div>
 
