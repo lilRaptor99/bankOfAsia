@@ -13,22 +13,22 @@
 	 
     <div class="wrapper">
     <div class="header">
-    <table width="100%">
+    <table width="100%" border="1">
         <tr>
-        <td width="30%">
+        <td width="40%">
             <?php
                 echo "<h3>Signed in as:&nbsp; <em>" . $_SESSION["type"] . "</em> &nbsp;  &nbsp;  &nbsp; Username:&nbsp; <em>" . $_SESSION["username"] . "</em></h3>"; 
             ?>
         </td>
-        <td><h2>Query Page</h2></td>
-        <td><h3><a href="views.php">View Page</a></h3></td>
-        <td>
+        <td width="30%"><h2>Query Page</h2></td>
+        <td width="20%"><h3><a href="views.php">View Page</a></h3></td>
+        <td width="10%">
             <h3 align="center"><a href = "logout.php">Sign Out</a></h3>
         </td>
         </tr>
 
     </table>
-    <br><br><br><br>
+    <br>
     <h3 align="center">SELECT Queries</h3><br>
         <form action="select_queries.php" method="POST">
         <ol>
