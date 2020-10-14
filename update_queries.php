@@ -55,8 +55,8 @@
         echo "<h4>Query:</h4><p>". $sql ."</p>";
         mysqli_close($db);
 
-        echo "<h4>You will be redirected to Query Page in <em>6 seconds</em></h4>";
-        //header( "refresh:6;url=queries.php" );
+        echo "<h4>You will be redirected to Query Page in <em>20 seconds</em></h4>";
+        header( "refresh:20;url=queries.php" );
 
     ?>
     </div>

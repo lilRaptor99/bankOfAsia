@@ -24,11 +24,11 @@
             <li>Incorrect Password<br></li>
     </ul>   
 
-    <h4>You will be redirected to Login Page in <em>6 seconds</em></h4>
+    <h4>You will be redirected to Login Page in <em>10 seconds</em></h4>
 
     <?php
     
-        header( "refresh:6;url=logout.php" );
+        header( "refresh:10;url=logout.php" );
         
     ?>
 	</div>

@@ -74,8 +74,8 @@
         echo "<h4>Query:</h4><p>". $sql ."</p>";
         mysqli_close($db);
 
-        echo "<h4>You will be redirected to View Page in <em>8 seconds</em></h4>";
-        //header( "refresh:8;url=views.php" );
+        echo "<h4>You will be redirected to View Page in <em>20 seconds</em></h4>";
+        header( "refresh:20;url=views.php" );
 
     ?>
     </div>
