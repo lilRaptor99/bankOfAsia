@@ -20,9 +20,9 @@
                     echo "<h3>Signed in as:&nbsp; <em>" . $_SESSION["type"] . "</em> &nbsp;  &nbsp;  &nbsp; Username:&nbsp; <em>" . $_SESSION["username"] . "</em></h3>"; 
                 ?>
             </td>
-            <td width="30%"><h2>View Page</h2></td>
-            <td width="20%"><h3><a href="queries.php">Query Page</a></h3></td>
-            <td width="10%">
+            <td width="20%"><h2>View Page</h2></td>
+            <td width="25%"><h3><a href="queries.php">Query Page</a></h3></td>
+            <td width="15%">
                 <h3 align="center"><a href = "logout.php">Sign Out</a></h3>
             </td>
             </tr>
