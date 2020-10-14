@@ -22,7 +22,13 @@
         $sql;   //sql query that needs to be executed selected by which button is pressed
         if(isset($_POST["delete1"])) $sql = "DELETE FROM employee WHERE employee_id = '" . $_POST["del1_eID"] . "';";
 
-        else if(isset($_POST["delete2"])) $sql = "";
+        else if(isset($_POST["delete2"])) $sql = "DELETE FROM employee_qualification WHERE employee_id = '" . $_POST["del2_eID"] . "';";
+
+        else if(isset($_POST["delete3"])) $sql = "DELETE FROM branch WHERE branch_id = '" . $_POST["del3_brID"] . "';";
+
+        else if(isset($_POST["delete4"])) $sql = "DELETE FROM customer WHERE customer_id = '" . $_POST["del4_custID"] . "';";
+
+        else if(isset($_POST["delete5"])) $sql = "DELETE FROM person WHERE customer_id = '" . $_POST["del5_custID"] . "';";
         
         //$result = 1;
         $result = mysqli_query($db,$sql);
@@ -35,13 +41,14 @@
             } else{
                 echo "<h3><em>$rowsAffected rows</em> Deleted Successfully</h3>";
             }
-            echo "<h4>Query:</h4><p>". $sql ."</p>";
+            
 
         } else {
             echo "<p>Error: Invalid Data inserted or you have NO PERMISSION to execute this query</p>";
             echo "<p>Error description: " . mysqli_error($db) . "</p>";
         }
-          
+        
+        echo "<h4>Query:</h4><p>". $sql ."</p>";
         mysqli_close($db);
 
         echo "<h4>You will be redirected to Query Page in <em>8 seconds</em></h4>";

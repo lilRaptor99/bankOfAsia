@@ -146,9 +146,21 @@
             </li>
             <input type="submit" value="Execute Query" name="delete1"><br><br>
 
-            <li> DELETE FROM -table- WHERE -attribute- = ' ';
+            <li> DELETE FROM employee_qualification WHERE employee_id = '<input type="text" maxlength="5" size="2" name="del2_eID" placeholder="EmpID">';
             </li>
             <input type="submit" value="Execute Query" name="delete2"><br><br>
+
+            <li> DELETE FROM branch WHERE branch_id = '<input type="text" maxlength="3" size="3" name="del3_brID" placeholder="BR.ID">';
+            </li>
+            <input type="submit" value="Execute Query" name="delete3"><br><br>
+
+            <li> DELETE FROM customer WHERE customer_id = '<input type="text" maxlength="5" size="3" name="del4_custID" placeholder="Cust ID">';
+            </li>
+            <input type="submit" value="Execute Query" name="delete4"><br><br>
+
+            <li> DELETE FROM person WHERE customer_id = '<input type="text" maxlength="5" size="3" name="del5_custID" placeholder="Cust ID">';
+            </li>
+            <input type="submit" value="Execute Query" name="delete5"><br><br>
 
         </ol>
         </form>
