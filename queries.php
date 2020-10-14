@@ -13,7 +13,7 @@
 	 
     <div class="wrapper">
     <div class="header">
-    <table width="100%" border="1">
+    <table width="100%">
         <tr>
         <td width="40%">
             <?php
